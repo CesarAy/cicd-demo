@@ -27,6 +27,9 @@ class CalculatorTests(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(divide(10, 4), 2.5)
 
+    def test_divide_negative_number(self):
+        self.assertEqual(divide(-12, 3), -4)
+
     def test_divide_by_zero(self):
         with self.assertRaisesRegex(ValueError, "Cannot divide by zero"):
             divide(10, 0)
