@@ -1,0 +1,14 @@
+services:
+  jenkins:
+    build:
+      context: ./docker
+    image: cicd-demo-jenkins:local
+    container_name: cicd-demo-jenkins
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+
+volumes:
+  jenkins_home:
