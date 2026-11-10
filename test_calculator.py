@@ -34,6 +34,9 @@ class CalculatorTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Cannot divide by zero"):
             divide(10, 0)
 
+    def test_multiply_negative_numbers(self):
+        self.assertEqual(multiply(-3, -4), 12)
+
 
 if __name__ == "__main__":
     unittest.main()
